@@ -5,12 +5,10 @@ function [value discrete] = C(x)
 % Description: Flow set
 % Return C if outside of D, and 1 if inside C
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-x1 = x(1);
-x2 = x(2);
-x=[x1;x2];
-global M;
+tau = x(3);
+global T;
 
-if (x'*M*x>=0)
+if (tau<=T)
    
     value = 1;
 else

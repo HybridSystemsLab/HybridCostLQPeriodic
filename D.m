@@ -5,13 +5,10 @@ function inside = D(x)
 % Description: Jump set
 % Return 0 if outside of D, and 1 if inside D
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-x1 = x(1);
-x2 = x(2);
-x=[x1;x2];
+tau = x(3);
+global T;
 
-global M;
-
-if (x'*M*x<=0)
+if (tau>=T)
     inside = 1;
 else
     inside = 0;

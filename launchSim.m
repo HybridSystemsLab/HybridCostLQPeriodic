@@ -1,13 +1,14 @@
 %close all;
 clc;
 Out=runF();
-x=Out(:,1:5);
+x=Out(:,1:6);
 xplant=x(:,1:2);
-cost=x(:,3);
-t=Out(:,5);
-j=Out(:,4);
+tau=x(:,3);
+cost=x(:,4);
+t=Out(:,6);
+j=Out(:,5);
 figure(1);
-%plotV(P1,P2,epsilon,e,tau,t,j,'k',1,sigma);
+
 %% Plot
 plot(xplant(:,1), xplant(:,2),'-b');
 grid on;

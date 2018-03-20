@@ -1,9 +1,9 @@
 function [outF]= runF()
 
 % initial conditions
-x1_0 = 2;
-x2_0 = 6;
-x0 = [x1_0;x2_0;0];
+x1_0 = 0.2;
+x2_0 = 0;
+x0 = [x1_0;x2_0;0;0];
 % simulation horizon
 TSPAN=[0  50];
 JSPAN = [0 400];

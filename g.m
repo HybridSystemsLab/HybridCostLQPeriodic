@@ -10,8 +10,10 @@ function xplus = g(x)
 % state
 x1 = x(1);
 x2 = x(2);
-J= x(3);
+x3= x(3);
+J= x(4);
 x=[x1;x2];
+
 global Ad Qc;
-xplus=[Ad*x; J+x'*Qc*x];
+xplus=[Ad*x;0;J+x'*Qc*x];
 end
