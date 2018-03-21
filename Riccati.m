@@ -1,4 +1,4 @@
-%This script provide the solution to the Lyapunov equaiton in Example 1 
+%This script provides the solution to the Lyapunov equaiton in Example 1 
 
 clear all;
 

@@ -39,7 +39,10 @@ P_0=(psi_0_2_1+expm(Ac'*T)*X)*expm(Ac*T);
 %% Simulation of the hybrid system including computation of the cost along the solution
 
 %initial condition
-xp0=[1,1];
+x0=[1,1];
+x1_0 = x0(1);
+x2_0 = x0(2);
+x0 = [x1_0;x2_0;0;0];
 % simulation horizon
 TSPAN=[0  50];
 JSPAN = [0 400];
@@ -57,8 +60,6 @@ maxStepCoefficient = .1;  % set the maximum step length. At each run of the
                    %  Default value = 0.1
 
 % simulate
-x0=[xp0';0;0];
-
 [t, x, j] = HyEQsolver(@f,@g,@C,@D,x0,TSPAN,JSPAN,rule,options,maxStepCoefficient);
 
 xp=x(:,1:2);
@@ -69,7 +70,5 @@ figure(1);
 plotHarc(xp(:,1),j,xp(:,2));
 grid on;
 figure(2);
-plotHarcColor(t,j,cost);
-hold on
-plot(t,t*0+xp0*P_0*xp0','--', 'linewidth',2);
 grid on;
+plotHarcColor(t,j,cost);
