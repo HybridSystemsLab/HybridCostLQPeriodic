@@ -1,4 +1,4 @@
-%This script allows one to reproduce Example 1 in Ferrante Sanfelice CDC
+%This script allows one to reproduce Example 2 in Ferrante Sanfelice CDC
 %2018
 
 %Definition of the data
